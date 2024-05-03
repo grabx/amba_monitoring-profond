@@ -11,8 +11,8 @@ az login --tenant d3450f80-7150-46aa-bfab-194c2ff90391
     Set-Location "C:\Users\ManuelMeyer\OneDrive - GrabX Solutions\_Projects\Profond SLA\_Code\amba_monitoring-profond\patterns\alz"
     $template = ".\alzArm-MME.json"
 
-    #ugly hack warning here: I am referencing the template from the original repo fork here:
-    $templateUri =  "https://raw.githubusercontent.com/grabx/amba_azure-monitor-baseline-alerts/main/patterns/alz/alzArm.json"
+    ##IMPORTANT. MUST SWITCH REPO TO PUBLIC BEFORE DEPLOYMENT !!!!!
+    $templateUri =  "https://raw.githubusercontent.com/grabx/amba_monitoring-profond/main/patterns/alz/alzArm-MME.json"
     $parameterfile = ".\alzArm-MME.param.json"
     
     #Validate File
@@ -36,7 +36,7 @@ az login --tenant d3450f80-7150-46aa-bfab-194c2ff90391
 
 
 
-        
+
     #--template-file $template `
      #--template-uri  https://raw.githubusercontent.com/***YourGithubFork***/azure-monitor-baseline-alerts/***main
 

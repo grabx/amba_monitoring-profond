@@ -30,9 +30,9 @@
             "deployAMBAManagement": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'), '/providers/Microsoft.Authorization/policySetDefinitions/Alerting-Management')]"
         },
         "policyAssignmentNames": {
-            "ambaManagement": "Deploy-AMBA-Management",
+            "ambaManagement": "prof-az-ini-grabxmonitoring-management",
             "description": "Initiative to deploy AMBA alerts relevant to the ALZ Management management group",
-            "displayName": "Deploy Azure Monitor Baseline Alerts for Management"
+            "displayName": "prof-az-ini-grabxmonitoring-management"
         },
         "nonComplianceMessage": {
             "message": "Alerting {enforcementMode} be deployed to Azure services.",

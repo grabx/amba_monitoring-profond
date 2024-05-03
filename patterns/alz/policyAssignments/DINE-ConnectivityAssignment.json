@@ -30,9 +30,9 @@
             "deployAMBAConnectivity": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'), '/providers/Microsoft.Authorization/policySetDefinitions/Alerting-Connectivity')]"
         },
         "policyAssignmentNames": {
-            "ambaConnectivity": "Deploy-AMBA-Connectivity",
+            "ambaConnectivity": "prof-az-ini-grabxmonitoring-connectivity",
             "description": "Initiative to deploy AMBA alerts relevant to the ALZ Connectivity management group",
-            "displayName": "Deploy Azure Monitor Baseline Alerts for Connectivity"
+            "displayName": "prof-az-ini-grabxmonitoring-connectivity"
         },
         "nonComplianceMessage": {
             "message": "Alerting {enforcementMode} be deployed to Azure services.",

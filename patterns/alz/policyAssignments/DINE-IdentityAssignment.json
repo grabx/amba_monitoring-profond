@@ -30,9 +30,9 @@
             "deployAMBAIdentity": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'), '/providers/Microsoft.Authorization/policySetDefinitions/Alerting-Identity')]"
         },
         "policyAssignmentNames": {
-            "ambaIdentity": "Deploy-AMBA-Identity",
+            "ambaIdentity": "prof-az-ini-grabxmonitoring-identity",
             "description": "Initiative to deploy AMBA alerts relevant to the ALZ Identity management group",
-            "displayName": "Deploy Azure Monitor Baseline Alerts for Identity"
+            "displayName": "prof-az-ini-grabxmonitoring-identity"
         },
         "nonComplianceMessage": {
             "message": "Alerting {enforcementMode} be deployed to Azure services.",
