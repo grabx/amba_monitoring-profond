@@ -21,22 +21,22 @@
       "value": "manutenant"
     },
     "enableAMBAConnectivity": {
-      "value": "No"
+      "value": "Yes"
     },
     "enableAMBAIdentity": {
-      "value": "No"
+      "value": "Yes"
     },
     "enableAMBALandingZone": {
-      "value": "No"
+      "value": "Yes"
     },
     "enableAMBAManagement": {
-      "value": "No"
+      "value": "Yes"
     },
     "enableAMBAServiceHealth": {
-      "value": "No"
+      "value": "Yes"
     },
     "enableAMBANotificationAssets": {
-      "value": "No"
+      "value": "Yes"
     },
     "telemetryOptOut": {
       "value": "No"

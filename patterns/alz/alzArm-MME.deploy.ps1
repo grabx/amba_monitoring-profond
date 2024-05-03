@@ -8,15 +8,26 @@ az login --tenant d3450f80-7150-46aa-bfab-194c2ff90391
     az account set -s "711c2059-9e0b-404c-9653-5b31ad49a4fc"
 
     az account show
-    Set-Location "C:\Users\ManuelMeyer\OneDrive - GrabX Solutions\_Projects\Profond SLA\_Code\amba_monitoring-profond2\patterns\alz"
-    # $template = ".\alzArm-MME.json"
-    $templateUri =  "https://raw.githubusercontent.com/grabx/amba_monitoring-profond2/main/patterns/alz/alzArm-MME.json"
+    Set-Location "C:\Users\ManuelMeyer\OneDrive - GrabX Solutions\_Projects\Profond SLA\_Code\amba_monitoring-profond\patterns\alz"
+    $template = ".\alzArm-MME.json"
+
+    #ugly hack warning here: I am referencing the template from the original repo fork here:
+    $templateUri =  "https://raw.githubusercontent.com/grabx/amba_azure-monitor-baseline-alerts/main/patterns/alz/alzArm.json"
     $parameterfile = ".\alzArm-MME.param.json"
     
     #Validate File
     az deployment mg validate `
         --management-group-id "manutenant" `
-        --template-uri  templateUri `
+        --template-uri  $templateUri `
+        --parameters $parameterfile `
+        --location "switzerlandnorth" 
+
+    #Deploy Template
+    $deploymentname = $template.Trim('.', '\').Replace('\','_') + "-" + (Get-Date -format yyyyMMddhhmm).ToString()
+    az deployment mg create `
+        --name $deploymentname `
+        --management-group-id "manutenant" `
+        --template-uri  $templateUri `
         --parameters $parameterfile `
         --location "switzerlandnorth" 
 
@@ -24,15 +35,8 @@ az login --tenant d3450f80-7150-46aa-bfab-194c2ff90391
 
 
 
-    #Deploy Template
-    $deploymentname = $template.Trim('.', '\').Replace('\','_') + "-" + (Get-Date -format yyyyMMddhhmm).ToString()
-    az deployment mg create `
-    --name $deploymentname `
-    --management-group-id "manutenant" `
-    --template-uri  templateUri `
-    --parameters $parameterfile `
-    --location "switzerlandnorth" 
 
+        
     #--template-file $template `
      #--template-uri  https://raw.githubusercontent.com/***YourGithubFork***/azure-monitor-baseline-alerts/***main
 
