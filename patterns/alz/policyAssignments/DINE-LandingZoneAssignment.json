@@ -30,9 +30,9 @@
             "deployAMBALandingZone": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'), '/providers/Microsoft.Authorization/policySetDefinitions/Alerting-LandingZone')]"
         },
         "policyAssignmentNames": {
-            "ambaLandingZone": "prof-az-ini-grabxmonitoring-landingzone",
+            "ambaLandingZone": "prof-ini-gx-lz",
             "description": "Initiative to deploy AMBA alerts relevant to the ALZ LandingZone management group",
-            "displayName": "prof-az-ini-grabxmonitoring-landingzone"
+            "displayName": "prof-ini-gx-lz"
         },
         "nonComplianceMessage": {
             "message": "Alerting {enforcementMode} be deployed to Azure services.",

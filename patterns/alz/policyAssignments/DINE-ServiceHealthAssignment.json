@@ -30,9 +30,9 @@
             "deployAMBAServiceHealth": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'), '/providers/Microsoft.Authorization/policySetDefinitions/Alerting-ServiceHealth')]"
         },
         "policyAssignmentNames": {
-            "ambaServiceHealth": "prof-az-ini-grabxmonitoring-servicehealth",
+            "ambaServiceHealth": "prof-ini-gx-health",
             "description": "Initiative to deploy AMBA Service Health alerts to Azure services",
-            "displayName": "prof-az-ini-grabxmonitoring-servicehealth"
+            "displayName": "prof-ini-gx-health"
         },
         "nonComplianceMessage": {
             "message": "Alerting {enforcementMode} be deployed to Azure services.",
